@@ -1,0 +1,4 @@
+interface:
+  display_name: "Graphic Brief Production"
+  short_description: "Clarify rough design ideas."
+  default_prompt: "Use $graphic-brief-production to turn my rough graphic idea into a clear production brief."

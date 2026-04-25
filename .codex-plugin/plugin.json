@@ -1,0 +1,33 @@
+{
+  "name": "graphic-design-production",
+  "version": "0.1.0",
+  "description": "Graphic design production skills for clarifying rough briefs and auditing delivery files.",
+  "author": {
+    "name": "Local Codex User"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "graphic-design",
+    "production",
+    "photoshop",
+    "illustrator",
+    "delivery"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Graphic Design Production",
+    "shortDescription": "Clarify graphic briefs and audit delivery files.",
+    "longDescription": "A local plugin for computer graphic designers who use Photoshop and Illustrator. It separates creative brief clarification from practical delivery-file auditing so each skill stays focused.",
+    "developerName": "Local",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use $graphic-brief-production to organize this rough design idea.",
+      "Use $graphic-delivery-audit to inspect this delivery folder."
+    ],
+    "brandColor": "#2563EB"
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Graphic Delivery Audit"
+  short_description: "Audit delivery folders and files."
+  default_prompt: "Use $graphic-delivery-audit to inspect this design delivery folder and summarize risks."
