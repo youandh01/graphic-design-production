@@ -57,6 +57,7 @@ def main() -> int:
     parser.add_argument("folder", help="Folder containing delivery files.")
     parser.add_argument("--csv", action="store_true", help="Write CSV to stdout.")
     parser.add_argument("--fail-on-issues", action="store_true", help="Exit with code 1 when any issue is found.")
+    parser.add_argument("--include-dotfiles", action="store_true", help="Include dotfiles such as .gitignore.")
     parser.add_argument(
         "--flag-cross-format-stems",
         action="store_true",
@@ -65,7 +66,11 @@ def main() -> int:
     args = parser.parse_args()
 
     root = root_from_arg(args.folder)
-    files = list(iter_delivery_files(root))
+    files = [
+        path
+        for path in iter_delivery_files(root)
+        if args.include_dotfiles or not path.name.startswith(".")
+    ]
     duplicate_names = duplicate_filename_keys(files, root)
     cross_format_stems = cross_format_stem_keys(files, root)
 
